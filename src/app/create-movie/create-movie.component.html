@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-center">
+        <img class="mx-2" width="35px" src="../../assets/film-solid.svg" alt="">
+        <h1 class="header-text">FILMY</h1>
+    </div>
+    <h3 class="mt-5">DODAJ NOWY FILM</h3>
+    <div class="form-group mt-5">
+        <input [formControl]="name" type="text" class="form-control" placeholder="Wpisz Tytuł filmu">
+    </div>
+    <div class="d-flex align-items-baseline">
+        <button class="btn btn-light mt-5" (click)="addNew()">DODAJ</button>
+        <span style="color: rgb(87, 158, 87); font-weight: 600 ; margin-left: 3%" *ngIf="this.added">DODANO</span>
+    </div>
+</div>
+
+<div style="position: absolute; top: 10px; right: 200px">
+    <button routerLink="/movie" class="btn btn-light d-flex align-items-center">
+        <span style="font-weight: 600">WRÓĆ </span>
+    </button>
+</div>

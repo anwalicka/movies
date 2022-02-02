@@ -7,7 +7,7 @@
     <div class="d-flex mt-5 w-100 flex-wrap justify-content-center">
         <ng-container *ngFor="let movie of movie$ | async">
             <div class="movie-container w-25 m-3 d-flex justify-content-center flex-wrap">
-                <div class="movie-default-img" style="">
+                <div class="movie-default-img">
                 </div>
                <p class="mx-2 movie-name">{{ movie.name }}</p> 
             </div>
@@ -16,7 +16,7 @@
 </div>
 
 <div style="position: absolute; top: 10px; right: 200px">
-    <button class="btn btn-light d-flex align-items-center">
+    <button routerLink="/create-movie" class="btn btn-light d-flex align-items-center">
         <img class="mx-2" width="15px" src="../../assets/plus-solid.svg" alt=""> 
        <span style="font-weight: 600">DODAJ NOWY</span> 
     </button>
