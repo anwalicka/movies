@@ -1,0 +1,27 @@
+$main-color-gray: rgb(128, 128, 128);
+$main-color-dark-gray: rgb(58, 58, 58);
+.movie-container {
+    border: solid $main-color-gray 1px;
+    height: 300px;
+
+    &:hover {
+        cursor: pointer;
+        border: solid $main-color-gray 2px;
+        .movie-name {
+            font-weight: 600;
+        }
+    }
+}
+
+.movie-name {
+    font-size: 20px;
+    font-family: 'Lato';
+    color: $main-color-dark-gray;
+}
+.header-text {
+    font-family: 'Lato';
+    font-weight: 800;
+    font-size: 36px; 
+    margin-bottom: 0;
+    color: $main-color-dark-gray;
+}
