@@ -6,7 +6,9 @@
 
     <div class="d-flex mt-5 w-100 flex-wrap justify-content-center">
         <ng-container *ngFor="let movie of movie$ | async">
-            <div class="movie-container w-25 m-3 d-flex align-items-end justify-content-center">
+            <div class="movie-container w-25 m-3 d-flex justify-content-center flex-wrap">
+                <div class="movie-default-img" style="">
+                </div>
                <p class="mx-2 movie-name">{{ movie.name }}</p> 
             </div>
         </ng-container>
