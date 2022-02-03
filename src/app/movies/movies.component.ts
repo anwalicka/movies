@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { IMovie } from './movies.model';
 import { MoviesService } from './movies.service';
 
@@ -10,10 +11,9 @@ import { MoviesService } from './movies.service';
 })
 export class MoviesComponent implements OnInit {
   movie$: Observable<IMovie[]> = of([]);
-  constructor(private moviesService: MoviesService,) { }
+  constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-    this.movie$ = this.moviesService.getMovies();
+    this.movie$ = this.moviesService.getMovies().pipe(map(x => x.data));
   }
-
 }
